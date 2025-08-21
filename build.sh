@@ -84,6 +84,14 @@ if [ "$BUILD" = true ]; then
     cd "$SCRIPT_DIR"
 fi
 
+# Please do not run rm with superuser as it is unsafe
+if [ "$(id -u)" -eq 0 ]; then
+    sudo -u "$SUDO_USER" rm -r "$SCRIPT_DIR/initramfs"
+else
+    rm -r "$SCRIPT_DIR/initramfs"
+fi
+
+
 mkdir -p "$SCRIPT_DIR/initramfs/bin"
 if [ "$ADD_BOX" = true ]; then
     mkdir -p "initramfs/bin"
