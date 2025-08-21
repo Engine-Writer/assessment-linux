@@ -80,4 +80,4 @@ You should see a QEMU no-graphic appear in your CLI, to close it, press Ctrl+A t
 
 ## License
 
-This project is not licensed because ~~I still can't find a license~~ this is an interview project. The code may be used freely anywhere as long as the file is equiped with a visible disclaimer linking to this GitHub repository
+This project is not licensed because it is an interview project. The code may be used freely anywhere as long as the file is equiped with a visible disclaimer linking to this GitHub repository

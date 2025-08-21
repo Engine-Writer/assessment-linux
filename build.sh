@@ -8,7 +8,7 @@ if [ -z "$BASH_VERSION" ]; then
 fi
 
 KVER="6.15.9"
-BUILD=false                 # Set to false if you already built it
+BUILD=true                  # Set to false if you already built it
 SCRIPT_DIR="$PWD"
 WORK_DIR="$PWD/build-$KVER"
 DISK_SIZE=100               # In MiB
