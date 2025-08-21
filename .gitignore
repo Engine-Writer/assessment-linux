@@ -1,0 +1,43 @@
+# Build directories
+build-*/
+linux-*/
+
+# Kernel objects
+*.o
+*.ko
+*.mod.*
+*.cmd
+*.tmp
+*.d
+*.order
+*.symvers
+
+# Kernel archives
+*.tar.xz
+*.tar.gz
+
+# Initramfs
+initramfs.cpio.gz
+initramfs/
+
+# Busybox (Optional)
+busybox_local/
+busybox_*
+
+# Disk images
+*.img
+*.iso
+*.vdi
+*.vmdk
+
+# Editor/IDE files
+*.swp
+*~
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# History tracker
+.history/
