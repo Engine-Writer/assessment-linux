@@ -8,9 +8,8 @@ This project provides a **minimal Linux-based assessment environment** that buil
 
 * **Init + BusyBox**: A minimal root filesystem running BusyBox with a custom init process.
 * **Race Condition Handling**: Special flags (`ttyS0_active`, `tty0_active`) prevent input-stealing race conditions between the init process and BusyBox.
-* **Build System**: Shell/Python-based automation for compiling, packaging, and running the kernel + rootfs under QEMU.
-* **Image Creation**: Automatically creates an initramfs and wraps it with a kernel to form a bootable Linux system.
-* **Emulation**: Supports running in QEMU for easy testing.
+* **Test System**: Shell-based automation for compiling, packaging, and running the kernel + rootfs under QEMU.
+* **Image Creation**: Automatically creates an initramfs and wraps it with a kernel to form a bootable Linux system if requested (i.e. if `DISK_IMG` is set to true in the build.sh bash script).
 
 ---
 
@@ -64,7 +63,7 @@ You should see a QEMU no-graphic appear in your CLI, to close it, press Ctrl+A t
 
 * GCC toolchain (`gcc`, `ld`)
 * GNU Make
-* Grub-install (grub-pc-bin, grub-efi-amd64-bin) for BIOS + UEFI install
+* Grub-install (grub-pc-bin, grub-efi-amd64-bin) for BIOS + UEFI image creation (Only needed if `DISK_IMG` is set to true)
 * Any Debian-based distro (for apt). Tested on Ubuntu 24 (WSL2)
 * QEMU (qemu-system-x86, qemu-kvm if you want to test real-time speed)
 * mkfs toolset (mkfs.fat (may require dosfstools), mkfs.ext4)
